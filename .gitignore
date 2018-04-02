@@ -12,3 +12,14 @@ node_modules
 
 # Desktop Services Store on macOS
 .DS_Store
+
+*.class
+*.iml
+npm-debug.log
+target/
+.idea/
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
