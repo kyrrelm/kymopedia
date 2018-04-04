@@ -1,7 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (Html, div, h1, h3, iframe, img, input, p, text)
-import Html.Attributes exposing (class, height, placeholder, src, width)
+import Html exposing (Html, a, div, h1, h3, iframe, img, input, p, text)
+import Html.Attributes exposing (class, height, href, placeholder, src, width)
 import Html.Events exposing (onClick, onInput)
 
 
@@ -62,7 +62,7 @@ view model =
 
 frame : Model -> Html Msg
 frame model =
-    div [ class "frame frame-youtube" ]
+    a [ class "frame frame-youtube", href "https://www.youtube.com/watch?v=8aGhZQkoFbQ" ]
         [ div [ class "crop-youtube" ]
             [ img [ src "https://img.youtube.com/vi/8aGhZQkoFbQ/0.jpg" ] [] ]
         , h3 [ class "title" ] [ text "What the heck is the event loop anyway?" ]
