@@ -76,18 +76,37 @@ iframe {
     margin-right: -1rem;
 }
 
-.frame-youtube{
+.frame {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     min-height: 5rem;
     min-width: 10rem;
-    max-width: 20rem;
 
     display: inline-block;
-    background-color: #efefef;
+    background-color: #ffffff;
+    text-align: left;
+    cursor: pointer;
 
     box-shadow: 10px 10px 90px 5px rgba(0,0,0,0.20);
+}
+
+.frame .title,.description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.frame .author {
+    margin-top: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.frame-youtube{
+    max-width: 20rem;
 }
 
 .crop-youtube {

@@ -62,10 +62,12 @@ view model =
 
 frame : Model -> Html Msg
 frame model =
-    div [ class "frame-youtube" ]
+    div [ class "frame frame-youtube" ]
         [ div [ class "crop-youtube" ]
             [ img [ src "https://img.youtube.com/vi/8aGhZQkoFbQ/0.jpg" ] [] ]
-        , h3 [] [ text "What the heck is the event loop anyway?" ]
+        , h3 [ class "title" ] [ text "What the heck is the event loop anyway?" ]
+        , p [ class "description" ] [ text "A brilliant, and easy to understand, explantation of what the event loop is and how it dictates some of the quirky mechanics of js." ]
+        , p [ class "author" ] [ text "- Philip Roberts" ]
         ]
 
 
