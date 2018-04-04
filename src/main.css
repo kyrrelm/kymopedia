@@ -4,10 +4,39 @@ body {
     text-align: center;
     color: #293c4b;
     background-color: #DEDEDE;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h1 {
     font-size: 30px;
+}
+
+
+input {
+    font-size: 1.5rem;
+    color: #293c4b;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    outline: none;
+    padding-left: 0.5rem;
+}
+
+iframe {
+    border: 0 none;
+}
+
+#background-img {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1000;
+    background: url(/nothing.svg) no-repeat;
+    background-size: 70%;
+    background-position-x: center;
+    background-position-y: center;
+    opacity: 0.08;
 }
 
 .main-title {
@@ -37,24 +66,38 @@ h1 {
     max-width: 80%;
 }
 
-input {
-    font-size: 1.5rem;
-    color: #293c4b;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 0 0 2px 0;
-    outline: none;
-    padding-left: 0.5rem;
+
+/*-------------------------------------*/
+
+.category-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
-#background-img {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: -1000;
-    background: url(/nothing.svg) no-repeat;
-    background-size: 70%;
-    background-position-x: center;
-    background-position-y: center;
-    opacity: 0.08;
+.frame-youtube{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    min-height: 5rem;
+    min-width: 10rem;
+    max-width: 20rem;
+
+    display: inline-block;
+    background-color: #efefef;
+
+    box-shadow: 10px 10px 90px 5px rgba(0,0,0,0.20);
 }
+
+.crop-youtube {
+    width: 20rem;
+    height: 8rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.crop-youtube img {
+    margin: -50px 0 0 0;
+}
+
