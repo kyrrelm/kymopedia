@@ -73,6 +73,14 @@ iframe {
 
 /*-------------------------------------*/
 
+.category {
+    text-align: left;
+}
+
+.category .title {
+    text-align: center;
+}
+
 .category-content {
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +93,7 @@ iframe {
     margin-right: 1rem;
     margin-bottom: 3rem;
     min-height: 5rem;
-    min-width: 10rem;
+    width: 20rem;
 
     display: inline-block;
     background-color: #ffffff;
@@ -108,20 +116,17 @@ iframe {
     padding-bottom: 1rem;
 }
 
-
-.frame-youtube{
-    max-width: 20rem;
-    min-width: 20rem;
-}
-
-.crop-youtube {
+.frame-img {
     width: 20rem;
     height: 8rem;
     overflow: hidden;
     margin-bottom: 1rem;
+    text-align:center;
 }
 
-.crop-youtube img {
-    margin: -50px 0 0 0;
+.frame-img img {
+    margin-top: -50px;
+    margin-left:-100%;
+    margin-right:-100%;
 }
 
