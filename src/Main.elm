@@ -6,6 +6,7 @@ import Html.Events exposing (onClick, onInput)
 import Http
 import Json.Decode as Decode
 import Json.Decode.Pipeline exposing (decode, required)
+import Regex
 import RemoteData exposing (WebData)
 
 
@@ -195,20 +196,35 @@ viewSubsubcategory subsubcategory =
     div
         [ class "subsubcategory" ]
         [ h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
-        , div [ class "subsubcategory-content" ]
-            [ frameYoutube
-            ]
+        , div [ class "subsubcategory-content" ] (List.map frame subsubcategory.entries)
         ]
 
 
-frameYoutube : Html Msg
-frameYoutube =
-    a [ class "frame", href "https://www.youtube.com/watch?v=8aGhZQkoFbQ" ]
+frame : Entry -> Html Msg
+frame entry =
+    let
+        isYoutubeLink =
+            Regex.contains (Regex.regex (Regex.escape "www.youtube.com/watch?v=")) entry.link
+
+        imageLink =
+            case isYoutubeLink of
+                True ->
+                    "https://img.youtube.com/vi/8aGhZQkoFbQ/0.jpg"
+
+                False ->
+                    case entry.thumbnail of
+                        Just thumbnail ->
+                            thumbnail
+
+                        Nothing ->
+                            "default link"
+    in
+    a [ class "frame", href entry.link ]
         [ div [ class "frame-img" ]
-            [ img [ src "https://img.youtube.com/vi/8aGhZQkoFbQ/0.jpg" ] [] ]
-        , h3 [ class "title" ] [ text "What the heck is the event loop anyway?" ]
-        , p [ class "description" ] [ text "A brilliant, and easy to understand, explantation of what the event loop is and how it dictates some of the quirky mechanics of js." ]
-        , p [ class "author" ] [ text "- Philip Roberts" ]
+            [ img [ src imageLink ] [] ]
+        , h3 [ class "title" ] [ text entry.title ]
+        , p [ class "description" ] [ text entry.description ]
+        , p [ class "author" ] [ text ("- " ++ entry.author) ]
         ]
 
 
