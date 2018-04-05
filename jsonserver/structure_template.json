@@ -2,19 +2,19 @@
   "api": [
     {
       "category": "Videoes",
-      "data": [
+      "subcategories": [
         {
-          "title": "Programming",
-          "data": [
+          "subcategory": "Programming",
+          "subsubcategories": [
             {
-              "subtitle": "Programming",
-              "data": [
+              "subsubcategory": "Programming",
+              "entries": [
                 {
                   "title": "What the heck is the event loop anyway?",
                   "description": "A brilliant, and easy to understand, explantation of what the event loop is and how it dictates some of the quirky mechanics of js.",
                   "author": "Philip Roberts",
                   "link": "https://www.youtube.com/watch?v=8aGhZQkoFbQ",
-                  "thumbnail": ""
+                  "thumbnail": null
                 }
               ]
             }
@@ -24,13 +24,13 @@
   },
   {
     "category": "People",
-    "data": [
+    "subcategories": [
       {
-        "title": "People",
-        "data": [
+        "subcategory": "People",
+        "subsubcategories": [
           {
-            "subtitle": "People",
-            "data": [
+            "subsubcategory": "People",
+            "entries": [
               {
                 "title": "What the heck is the event loop anyway?",
                 "description": "A brilliant, and easy to understand, explantation of what the event loop is and how it dictates some of the quirky mechanics of js.",
