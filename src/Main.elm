@@ -186,7 +186,16 @@ viewSubcategory subcategory =
     div
         [ class "subcategory" ]
         [ h2 [ class "subcategory-name" ] [ text subcategory.name ]
-        , div [ class "category-content" ]
+        , div [ class "subsubcategories" ] (List.map viewSubsubcategory subcategory.subsubcategories)
+        ]
+
+
+viewSubsubcategory : Subsubcategory -> Html Msg
+viewSubsubcategory subsubcategory =
+    div
+        [ class "subsubcategory" ]
+        [ h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
+        , div [ class "subsubcategory-content" ]
             [ frameYoutube
             ]
         ]
