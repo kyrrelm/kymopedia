@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82c5e806-578c-4d0f-9dc9-ad126465ff2b" name="Default" comment="">
+    <list default="true" id="82c5e806-578c-4d0f-9dc9-ad126465ff2b" name="Default" comment="youtube imagelink">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonserver/structure_template.json" afterPath="$PROJECT_DIR$/jsonserver/structure_template.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.elm" afterPath="$PROJECT_DIR$/src/Main.elm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="Main.elm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.elm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="224" column="38" lean-forward="true" selection-start-line="224" selection-start-column="38" selection-end-line="224" selection-end-column="38" />
+            <state relative-caret-position="161">
+              <caret line="217" column="34" lean-forward="false" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -38,8 +37,8 @@
       <file leaf-file-name="structure_template.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsonserver/structure_template.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="100" />
+            <state relative-caret-position="225">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -276,7 +275,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522697990725</updated>
-      <workItem from="1522697992234" duration="31787000" />
+      <workItem from="1522697992234" duration="34275000" />
     </task>
     <task id="LOCAL-00001" summary="file watcher">
       <created>1522698658013</created>
@@ -397,11 +396,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522961956213</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="youtube imagelink">
+      <created>1522964343266</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1522964343266</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31787000" />
+    <option name="totallyTimeSpent" value="34275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -460,7 +466,8 @@
     <MESSAGE value="json-api" />
     <MESSAGE value="categoryview" />
     <MESSAGE value="view subsubcategory" />
-    <option name="LAST_COMMIT_MESSAGE" value="view subsubcategory" />
+    <MESSAGE value="youtube imagelink" />
+    <option name="LAST_COMMIT_MESSAGE" value="youtube imagelink" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -622,16 +629,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jsonserver/structure_template.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="100" />
+        <state relative-caret-position="225">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.elm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="224" column="38" lean-forward="true" selection-start-line="224" selection-start-column="38" selection-end-line="224" selection-end-column="38" />
+        <state relative-caret-position="161">
+          <caret line="217" column="34" lean-forward="false" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
           <folding />
         </state>
       </provider>

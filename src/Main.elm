@@ -6,6 +6,7 @@ import Html.Events exposing (onClick, onInput)
 import Http
 import Json.Decode as Decode
 import Json.Decode.Pipeline exposing (decode, required)
+import List
 import Regex
 import RemoteData exposing (WebData)
 
@@ -206,10 +207,17 @@ frame entry =
         isYoutubeLink =
             Regex.contains (Regex.regex (Regex.escape "www.youtube.com/watch?v=")) entry.link
 
+        makeYoutubeThumbnailLink hash =
+            "https://img.youtube.com/vi/" ++ hash ++ "/0.jpg"
+
         imageLink =
             case isYoutubeLink of
                 True ->
-                    "https://img.youtube.com/vi/8aGhZQkoFbQ/0.jpg"
+                    String.split "v=" entry.link
+                        |> List.reverse
+                        |> List.head
+                        |> Maybe.withDefault ""
+                        |> makeYoutubeThumbnailLink
 
                 False ->
                     case entry.thumbnail of
@@ -217,7 +225,7 @@ frame entry =
                             thumbnail
 
                         Nothing ->
-                            "default link"
+                            "TODO: default link"
     in
     a [ class "frame", href entry.link ]
         [ div [ class "frame-img" ]
