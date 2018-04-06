@@ -236,17 +236,6 @@ frame entry =
         ]
 
 
-frameWikipedia : Model -> Html Msg
-frameWikipedia model =
-    a [ class "frame", href "https://en.wikipedia.org/wiki/Sam_Harris" ]
-        [ div [ class "frame-img" ]
-            [ img [ src "/sam_harris.jpg" ] [] ]
-        , h3 [ class "title" ] [ text "Sam Harris" ]
-        , p [ class "description" ] [ text "A brilliant,  and how it dictates some of the quirky mechanics of js." ]
-        , p [ class "author" ] [ text "" ]
-        ]
-
-
 
 ---- PROGRAM ----
 
