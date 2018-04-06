@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82c5e806-578c-4d0f-9dc9-ad126465ff2b" name="Default" comment="youtube imagelink">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.elm" afterPath="$PROJECT_DIR$/src/Main.elm" />
+    <list default="true" id="82c5e806-578c-4d0f-9dc9-ad126465ff2b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kymopedia.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -275,7 +278,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522697990725</updated>
-      <workItem from="1522697992234" duration="34275000" />
+      <workItem from="1522697992234" duration="34414000" />
     </task>
     <task id="LOCAL-00001" summary="file watcher">
       <created>1522698658013</created>
@@ -403,11 +406,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522964343266</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Dynamic youtube thumbnail link">
+      <created>1523027722264</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1523027722264</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34275000" />
+    <option name="totallyTimeSpent" value="34414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -467,7 +477,8 @@
     <MESSAGE value="categoryview" />
     <MESSAGE value="view subsubcategory" />
     <MESSAGE value="youtube imagelink" />
-    <option name="LAST_COMMIT_MESSAGE" value="youtube imagelink" />
+    <MESSAGE value="Dynamic youtube thumbnail link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamic youtube thumbnail link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
