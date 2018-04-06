@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c5e806-578c-4d0f-9dc9-ad126465ff2b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kymopedia.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/default_thumbnail.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonserver/structure_template.json" afterPath="$PROJECT_DIR$/jsonserver/structure_template.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.elm" afterPath="$PROJECT_DIR$/src/Main.elm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="Main.elm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.elm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="217" column="34" lean-forward="false" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
+            <state relative-caret-position="514">
+              <caret line="227" column="47" lean-forward="false" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -40,8 +39,8 @@
       <file leaf-file-name="structure_template.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsonserver/structure_template.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="59" />
+            <state relative-caret-position="570">
+              <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -154,6 +153,16 @@
               <item name="kymopedia" type="462c0819:PsiDirectoryNode" />
               <item name="jsonserver" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kymopedia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kymopedia" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kymopedia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kymopedia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -170,8 +179,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/jsonserver" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/jsonserver" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,7 +287,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522697990725</updated>
-      <workItem from="1522697992234" duration="34414000" />
+      <workItem from="1522697992234" duration="35471000" />
     </task>
     <task id="LOCAL-00001" summary="file watcher">
       <created>1522698658013</created>
@@ -413,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523027722264</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Untracked ignored files">
+      <created>1523027870457</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1523027870457</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34414000" />
+    <option name="totallyTimeSpent" value="35471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -478,7 +494,8 @@
     <MESSAGE value="view subsubcategory" />
     <MESSAGE value="youtube imagelink" />
     <MESSAGE value="Dynamic youtube thumbnail link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamic youtube thumbnail link" />
+    <MESSAGE value="Untracked ignored files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Untracked ignored files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -638,18 +655,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/rsz_buddha.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/rsz_1buddha.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jsonserver/structure_template.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="570">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/rsz_2buddha.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/default_thumbnail.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.elm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="217" column="34" lean-forward="false" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
+        <state relative-caret-position="514">
+          <caret line="227" column="47" lean-forward="false" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
           <folding />
         </state>
       </provider>

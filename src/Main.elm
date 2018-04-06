@@ -225,7 +225,7 @@ frame entry =
                             thumbnail
 
                         Nothing ->
-                            "TODO: default link"
+                            "/default_thumbnail.jpg"
     in
     a [ class "frame", href entry.link ]
         [ div [ class "frame-img" ]
