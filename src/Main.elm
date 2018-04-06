@@ -176,27 +176,52 @@ viewCategories model =
 
 viewCategory : Category -> Html Msg
 viewCategory category =
+    let
+        subcategoriesWithCategoryName =
+            List.map (\subcategory -> ( category.name, subcategory )) category.subcategories
+    in
     div
         [ class "category" ]
         [ h1 [ class "category-name" ] [ text category.name ]
-        , div [ class "subcategories" ] (List.map viewSubcategory category.subcategories)
+        , div [ class "subcategories" ] (List.map viewSubcategory subcategoriesWithCategoryName)
         ]
 
 
-viewSubcategory : Subcategory -> Html Msg
-viewSubcategory subcategory =
+viewSubcategory : ( String, Subcategory ) -> Html Msg
+viewSubcategory ( categoryName, subcategory ) =
+    let
+        maybeViewTitle =
+            case categoryName == subcategory.name of
+                True ->
+                    text ""
+
+                False ->
+                    h2 [ class "subcategory-name" ] [ text subcategory.name ]
+
+        subsubcategoriesWithSubcategoryName =
+            List.map (\subsubcategory -> ( subcategory.name, subsubcategory )) subcategory.subsubcategories
+    in
     div
         [ class "subcategory" ]
-        [ h2 [ class "subcategory-name" ] [ text subcategory.name ]
-        , div [ class "subsubcategories" ] (List.map viewSubsubcategory subcategory.subsubcategories)
+        [ maybeViewTitle
+        , div [ class "subsubcategories" ] (List.map viewSubsubcategory subsubcategoriesWithSubcategoryName)
         ]
 
 
-viewSubsubcategory : Subsubcategory -> Html Msg
-viewSubsubcategory subsubcategory =
+viewSubsubcategory : ( String, Subsubcategory ) -> Html Msg
+viewSubsubcategory ( subcategoryName, subsubcategory ) =
+    let
+        maybeViewTitle =
+            case subcategoryName == subsubcategory.name of
+                True ->
+                    text ""
+
+                False ->
+                    h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
+    in
     div
         [ class "subsubcategory" ]
-        [ h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
+        [ maybeViewTitle
         , div [ class "subsubcategory-content" ] (List.map frame subsubcategory.entries)
         ]
 
