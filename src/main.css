@@ -43,10 +43,14 @@ iframe {
     opacity: 0.08;
 }
 
+.main-title-container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
 .main-title {
-    margin-top: 8rem;
-    margin-bottom: 5rem;
     font-size: 60px;
+    display: inline;
 }
 
 .search-bar-container {
@@ -64,7 +68,7 @@ iframe {
 }
 
 .main-search-bar {
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     width: 30rem;
     padding-right: 2rem;
     max-width: 80%;
