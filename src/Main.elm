@@ -177,17 +177,23 @@ maybeViewCategories model =
 viewCategories : String -> List Category -> List (Html Msg)
 viewCategories mainSearchInput categories =
     let
+        filterMapCategoryWithSearchString =
+            filterMapCategory mainSearchInput
+
         filteredCategories =
-            List.filterMap filterCategory categories
+            List.filterMap filterMapCategoryWithSearchString categories
     in
     List.map viewCategory filteredCategories
 
 
-filterCategory : Category -> Maybe Category
-filterCategory category =
+filterMapCategory : String -> Category -> Maybe Category
+filterMapCategory mainSearchInput category =
     let
+        filteredSubcategoryWithSearchString =
+            filterMapSubcategory mainSearchInput
+
         filteredSubcategories =
-            List.filterMap filterSubcategory category.subcategories
+            List.filterMap filteredSubcategoryWithSearchString category.subcategories
     in
     case List.isEmpty filteredSubcategories of
         True ->
@@ -197,11 +203,14 @@ filterCategory category =
             Just { category | subcategories = filteredSubcategories }
 
 
-filterSubcategory : Subcategory -> Maybe Subcategory
-filterSubcategory subcategory =
+filterMapSubcategory : String -> Subcategory -> Maybe Subcategory
+filterMapSubcategory mainSearchInput subcategory =
     let
+        filterMapSubsubcategoryWithSearchString =
+            filterMapSubsubcategory mainSearchInput
+
         filteredSubsubcategories =
-            List.filterMap filterSubsubcategory subcategory.subsubcategories
+            List.filterMap filterMapSubsubcategoryWithSearchString subcategory.subsubcategories
     in
     case List.isEmpty filteredSubsubcategories of
         True ->
@@ -211,11 +220,11 @@ filterSubcategory subcategory =
             Just { subcategory | subsubcategories = filteredSubsubcategories }
 
 
-filterSubsubcategory : Subsubcategory -> Maybe Subsubcategory
-filterSubsubcategory subsubcategory =
+filterMapSubsubcategory : String -> Subsubcategory -> Maybe Subsubcategory
+filterMapSubsubcategory mainSearchInput subsubcategory =
     let
         filterSearchInput entry =
-            String.contains "Sam" entry.title
+            String.contains mainSearchInput entry.title
 
         filteredEntries =
             List.filter filterSearchInput subsubcategory.entries
