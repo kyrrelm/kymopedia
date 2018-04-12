@@ -182,7 +182,7 @@ viewCategories mainSearchInput categories =
         filteredCategories =
             List.filterMap filterMapCategoryWithSearchString categories
     in
-    List.map viewCategory filteredCategories
+        List.map viewCategory filteredCategories
 
 
 filterMapCategory : String -> Category -> Maybe Category
@@ -194,12 +194,12 @@ filterMapCategory mainSearchInput category =
         filteredSubcategories =
             List.filterMap filteredSubcategoryWithSearchString category.subcategories
     in
-    if String.contains (String.toLower mainSearchInput) (String.toLower category.name) then
-        Just category
-    else if List.isEmpty filteredSubcategories then
-        Nothing
-    else
-        Just { category | subcategories = filteredSubcategories }
+        if String.contains (String.toLower mainSearchInput) (String.toLower category.name) then
+            Just category
+        else if List.isEmpty filteredSubcategories then
+            Nothing
+        else
+            Just { category | subcategories = filteredSubcategories }
 
 
 filterMapSubcategory : String -> Subcategory -> Maybe Subcategory
@@ -211,10 +211,12 @@ filterMapSubcategory mainSearchInput subcategory =
         filteredSubsubcategories =
             List.filterMap filterMapSubsubcategoryWithSearchString subcategory.subsubcategories
     in
-    if List.isEmpty filteredSubsubcategories then
-        Nothing
-    else
-        Just { subcategory | subsubcategories = filteredSubsubcategories }
+        if String.contains (String.toLower mainSearchInput) (String.toLower subcategory.name) then
+            Just subcategory
+        else if List.isEmpty filteredSubsubcategories then
+            Nothing
+        else
+            Just { subcategory | subsubcategories = filteredSubsubcategories }
 
 
 filterMapSubsubcategory : String -> Subsubcategory -> Maybe Subsubcategory
@@ -229,10 +231,12 @@ filterMapSubsubcategory mainSearchInput subsubcategory =
         filteredEntries =
             List.filter filterSearchInput subsubcategory.entries
     in
-    if List.isEmpty filteredEntries then
-        Nothing
-    else
-        Just { subsubcategory | entries = filteredEntries }
+        if String.contains (String.toLower mainSearchInput) (String.toLower subsubcategory.name) then
+            Just subsubcategory
+        else if List.isEmpty filteredEntries then
+            Nothing
+        else
+            Just { subsubcategory | entries = filteredEntries }
 
 
 viewCategory : Category -> Html Msg
@@ -241,11 +245,11 @@ viewCategory category =
         subcategoriesWithCategoryName =
             List.map (\subcategory -> ( category.name, subcategory )) category.subcategories
     in
-    div
-        [ class "category" ]
-        [ h1 [ class "category-name" ] [ text category.name ]
-        , div [ class "subcategories" ] (List.map viewSubcategory subcategoriesWithCategoryName)
-        ]
+        div
+            [ class "category" ]
+            [ h1 [ class "category-name" ] [ text category.name ]
+            , div [ class "subcategories" ] (List.map viewSubcategory subcategoriesWithCategoryName)
+            ]
 
 
 viewSubcategory : ( String, Subcategory ) -> Html Msg
@@ -260,11 +264,11 @@ viewSubcategory ( categoryName, subcategory ) =
         subsubcategoriesWithSubcategoryName =
             List.map (\subsubcategory -> ( subcategory.name, subsubcategory )) subcategory.subsubcategories
     in
-    div
-        [ class "subcategory" ]
-        [ maybeViewTitle
-        , div [ class "subsubcategories" ] (List.map viewSubsubcategory subsubcategoriesWithSubcategoryName)
-        ]
+        div
+            [ class "subcategory" ]
+            [ maybeViewTitle
+            , div [ class "subsubcategories" ] (List.map viewSubsubcategory subsubcategoriesWithSubcategoryName)
+            ]
 
 
 viewSubsubcategory : ( String, Subsubcategory ) -> Html Msg
@@ -276,11 +280,11 @@ viewSubsubcategory ( subcategoryName, subsubcategory ) =
             else
                 h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
     in
-    div
-        [ class "subsubcategory" ]
-        [ maybeViewTitle
-        , div [ class "subsubcategory-content" ] (List.map frame subsubcategory.entries)
-        ]
+        div
+            [ class "subsubcategory" ]
+            [ maybeViewTitle
+            , div [ class "subsubcategory-content" ] (List.map frame subsubcategory.entries)
+            ]
 
 
 frame : Entry -> Html Msg
@@ -309,13 +313,13 @@ frame entry =
                         Nothing ->
                             "/default_thumbnail.jpg"
     in
-    a [ class "frame", href entry.link ]
-        [ div [ class "frame-img" ]
-            [ img [ src imageLink ] [] ]
-        , h3 [ class "title" ] [ text entry.title ]
-        , p [ class "description" ] [ text entry.description ]
-        , p [ class "author" ] [ text ("- " ++ entry.author) ]
-        ]
+        a [ class "frame", href entry.link ]
+            [ div [ class "frame-img" ]
+                [ img [ src imageLink ] [] ]
+            , h3 [ class "title" ] [ text entry.title ]
+            , p [ class "description" ] [ text entry.description ]
+            , p [ class "author" ] [ text ("- " ++ entry.author) ]
+            ]
 
 
 
