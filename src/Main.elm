@@ -194,12 +194,12 @@ filterMapCategory mainSearchInput category =
         filteredSubcategories =
             List.filterMap filteredSubcategoryWithSearchString category.subcategories
     in
-    case List.isEmpty filteredSubcategories of
-        True ->
-            Nothing
-
-        False ->
-            Just { category | subcategories = filteredSubcategories }
+    if String.contains (String.toLower mainSearchInput) (String.toLower category.name) then
+        Just category
+    else if List.isEmpty filteredSubcategories then
+        Nothing
+    else
+        Just { category | subcategories = filteredSubcategories }
 
 
 filterMapSubcategory : String -> Subcategory -> Maybe Subcategory
@@ -211,12 +211,10 @@ filterMapSubcategory mainSearchInput subcategory =
         filteredSubsubcategories =
             List.filterMap filterMapSubsubcategoryWithSearchString subcategory.subsubcategories
     in
-    case List.isEmpty filteredSubsubcategories of
-        True ->
-            Nothing
-
-        False ->
-            Just { subcategory | subsubcategories = filteredSubsubcategories }
+    if List.isEmpty filteredSubsubcategories then
+        Nothing
+    else
+        Just { subcategory | subsubcategories = filteredSubsubcategories }
 
 
 filterMapSubsubcategory : String -> Subsubcategory -> Maybe Subsubcategory
@@ -231,12 +229,10 @@ filterMapSubsubcategory mainSearchInput subsubcategory =
         filteredEntries =
             List.filter filterSearchInput subsubcategory.entries
     in
-    case List.isEmpty filteredEntries of
-        True ->
-            Nothing
-
-        False ->
-            Just { subsubcategory | entries = filteredEntries }
+    if List.isEmpty filteredEntries then
+        Nothing
+    else
+        Just { subsubcategory | entries = filteredEntries }
 
 
 viewCategory : Category -> Html Msg
@@ -256,12 +252,10 @@ viewSubcategory : ( String, Subcategory ) -> Html Msg
 viewSubcategory ( categoryName, subcategory ) =
     let
         maybeViewTitle =
-            case categoryName == subcategory.name of
-                True ->
-                    text ""
-
-                False ->
-                    h2 [ class "subcategory-name" ] [ text subcategory.name ]
+            if categoryName == subcategory.name then
+                text ""
+            else
+                h2 [ class "subcategory-name" ] [ text subcategory.name ]
 
         subsubcategoriesWithSubcategoryName =
             List.map (\subsubcategory -> ( subcategory.name, subsubcategory )) subcategory.subsubcategories
@@ -277,12 +271,10 @@ viewSubsubcategory : ( String, Subsubcategory ) -> Html Msg
 viewSubsubcategory ( subcategoryName, subsubcategory ) =
     let
         maybeViewTitle =
-            case subcategoryName == subsubcategory.name of
-                True ->
-                    text ""
-
-                False ->
-                    h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
+            if subcategoryName == subsubcategory.name then
+                text ""
+            else
+                h3 [ class "subsubcategory-name" ] [ text subsubcategory.name ]
     in
     div
         [ class "subsubcategory" ]
