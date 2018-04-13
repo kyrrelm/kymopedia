@@ -156,7 +156,7 @@ view model =
             [ input [ class "main-search-bar", placeholder "Search...", onInput OnInputMainSearch ] []
             , img [ src "/search-icon.svg" ] []
             ]
-        , div [ class "categories" ] (maybeViewCategories model)
+        , div [ class "content" ][ div [ class "categories" ] (maybeViewCategories model)]
         ]
 
 

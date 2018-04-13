@@ -23,6 +23,61 @@
     ]
   },
   {
+    "category": "Strength Training",
+    "subcategories": [
+      {
+        "subcategory": "Injury prevention and Posture",
+        "subsubcategories": [
+          {
+            "subsubcategory": "Shoulder",
+            "entries": [
+              {
+                "title": "Bulletproof Your Shoulders For Optimal Performance",
+                "description": "",
+                "author": "",
+                "link": "https://www.youtube.com/watch?v=3MxHX9j15BU",
+                "thumbnail": null
+              },
+              {
+                "title": "Scapular/Shoulder Mobility Drills",
+                "description": "",
+                "author": "",
+                "link": "https://www.youtube.com/watch?v=vsiNm3WekCo",
+                "thumbnail": null
+              }
+            ]
+          },
+          {
+            "subsubcategory": "Posture",
+            "entries": [
+              {
+                "title": "Fix Anterior pelvic tilt",
+                "description": "",
+                "author": "",
+                "link": "https://www.youtube.com/watch?v=MjAK8E19T5A",
+                "thumbnail": null
+              },
+              {
+                "title": "Fix Forward head posture",
+                "description": "",
+                "author": "",
+                "link": "https://www.youtube.com/watch?v=wQylqaCl8Zo",
+                "thumbnail": null
+              },
+              {
+                "title": "Improve Your Posture | 3 Exercises",
+                "description": "",
+                "author": "",
+                "link": "https://www.youtube.com/watch?v=CqTtScFQ5-c",
+                "thumbnail": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "category": "People",
     "subcategories": [
       {
@@ -33,14 +88,21 @@
             "entries": [
               {
                 "title": "Sam Harris",
-                "description": "Something cool about Sam Harris",
+                "description": "Sam Harris is an American author, philosopher, neuroscientist, blogger, and podcast host. He is concerned with matters that touch on morality, neuroscience, free will. He is an advocate for secular spirituality. In his book Waking Up he argues that the self is an illusion, and that this can be dicovered through meditation",
                 "author": "",
                 "link": "https://en.wikipedia.org/wiki/Sam_Harris",
-                "thumbnail": "https://cdn-images-1.medium.com/max/1200/1*wbNwgfGx2uMI1h2DkCokLQ.jpeg"
+                "thumbnail": "https://raw.githubusercontent.com/kyrrelm/kymopedia-data/master/sam_harris.jpg"
+              },
+              {
+                "title": "Richard Dawkins",
+                "description": "Richard Dawkins is an English ethologist, evolutionary biologist, and author. Dawkins is an atheist, and is well known for his criticism of creationism and intelligent design.",
+                "author": "",
+                "link": "https://en.wikipedia.org/wiki/Trygve_Hegnar",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Richard_Dawkins_Cooper_Union_Shankbone.jpg/384px-Richard_Dawkins_Cooper_Union_Shankbone.jpg"
               },
               {
                 "title": "Trygve Hegnar",
-                "description": "Something cool about Trygve Hegnar",
+                "description": "Trygve Hegnar is a Norwegian businessperson, investor and chief editor of the business magazines Kapital",
                 "author": "",
                 "link": "https://en.wikipedia.org/wiki/Trygve_Hegnar",
                 "thumbnail": "http://www.hegnar.no/var/hegnar/storage/images/media/images/trygve-hegnar-fa/20148616-1-nor-NO/trygve-hegnar-fa_full_article.jpg"
